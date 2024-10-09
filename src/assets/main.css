@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+label {
+  @apply flex items-center gap-1;
+}
+
+input[type='text'],
+input[type='email'] {
+  @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-blue-500;
+}
+
+textarea {
+  @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-blue-500;
+}
+
+input[type='radio'] {
+  @apply mr-2 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300;
+}
+
+select {
+  @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-blue-500;
+}
+
+.btn-primary {
+  @apply w-full rounded-md bg-blue-700 px-5 py-2 text-center text-sm text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto;
+}
+
+.notification-list {
+  @apply fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px];
+}
+
+.notification-item {
+  @apply pointer-events-auto relative mb-4 flex w-full items-center justify-between space-x-2 overflow-hidden rounded-md border bg-white p-4 pr-6 text-black shadow-lg transition-all;
+}
+
+.notification-ack-button {
+  @apply inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium transition-colors hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-300 disabled:pointer-events-none disabled:opacity-50;
+}
